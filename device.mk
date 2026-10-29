@@ -64,6 +64,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Dolby
 $(call inherit-product, hardware/motorola/dolby/setup.mk)
+PRODUCT_SOURCE_ROOT_DIRS += -packages/apps/DolbyAtmos
 
 # Properties (managed in BoardConfig.mk via properties/*.prop)
 
