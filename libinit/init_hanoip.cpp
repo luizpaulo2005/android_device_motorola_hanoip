@@ -13,14 +13,13 @@ struct Variant {
     std::string model;
     std::string name;
     std::string marketname;
-    std::string camera;
 };
 
 static const std::vector<Variant> variants = {
-    {"XT2135-1", "moto g(60)", "hanoip_g", "Motorola Moto G60", "108MP + 8MP + 2MP"},
-    {"XT2135-2", "moto g(60)", "hanoip_g", "Motorola Moto G60", "108MP + 8MP + 2MP"},
-    {"XT2137-1", "moto g(40) fusion", "hanoip_in", "Motorola Moto G40 Fusion", "64MP + 8MP + 2MP"},
-    {"XT2137-2", "moto g(40) fusion", "hanoip_in", "Motorola Moto G40 Fusion", "64MP + 8MP + 2MP"},
+    {"XT2135-1", "moto g(60)", "hanoip_g", "Motorola Moto G60"},
+    {"XT2135-2", "moto g(60)", "hanoip_g", "Motorola Moto G60"},
+    {"XT2137-1", "moto g(40) fusion", "hanoip_in", "Motorola Moto G40 Fusion"},
+    {"XT2137-2", "moto g(40) fusion", "hanoip_in", "Motorola Moto G40 Fusion"},
 };
 
 void property_override(const std::string& prop, const std::string& value) {
@@ -58,6 +57,4 @@ void vendor_load_properties() {
     set_gapps_props(current_variant.model, current_variant.name);
 
     property_override("ro.product.marketname", current_variant.marketname);
-    property_override("ro.infinity.soc", "Snapdragon 732G");
-    property_override("ro.infinity.camera", current_variant.camera);
 }
