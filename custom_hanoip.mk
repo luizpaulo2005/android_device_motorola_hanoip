@@ -28,7 +28,7 @@ $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 # Whether Including Google Apps
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-TARGET_INIT_VENDOR_LIB := //device/motorola/hanoip/init:init_hanoip
+$(call soong_config_set,libinit,vendor_init_lib,//device/motorola/hanoip/init:init_hanoip)
 TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 
 # Device identifier. This must come after all inclusions.
