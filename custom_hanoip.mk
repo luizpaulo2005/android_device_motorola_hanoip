@@ -33,7 +33,7 @@ TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 
 # Debug: adb from first boot when a local (untracked) adbkey.pub is present
 ifneq ($(wildcard device/motorola/hanoip/adbkey.pub),)
-PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG := false
+PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG :=
 PRODUCT_ADB_KEYS := device/motorola/hanoip/adbkey.pub
 endif
 
