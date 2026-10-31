@@ -35,6 +35,7 @@ TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 ifneq ($(wildcard device/motorola/hanoip/adbkey.pub),)
 PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG :=
 PRODUCT_ADB_KEYS := device/motorola/hanoip/adbkey.pub
+PRODUCT_SYSTEM_PROPERTIES += persist.sys.usb.config=adb
 endif
 
 # Device identifier. This must come after all inclusions.
