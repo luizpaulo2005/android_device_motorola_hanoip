@@ -23,20 +23,25 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, device/motorola/hanoip/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Maintainer name
-INFINITY_MAINTAINER := "JonashOfficial"
 
 # Whether Including Google Apps
-WITH_GAPPS := true
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-TARGET_INIT_VENDOR_LIB := //device/motorola/hanoip/libinit:init_hanoip
+$(call soong_config_set,libinit,vendor_init_lib,//device/motorola/hanoip/libinit:init_hanoip)
 TARGET_RECOVERY_DEVICE_MODULES := init_hanoip
 
+# Debug: adb from first boot when a local (untracked) adbkey.pub is present
+ifneq ($(wildcard device/motorola/hanoip/adbkey.pub),)
+PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG :=
+PRODUCT_ADB_KEYS := device/motorola/hanoip/adbkey.pub
+PRODUCT_SYSTEM_PROPERTIES += persist.sys.usb.config=adb
+endif
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := infinity_hanoip
+PRODUCT_NAME := custom_hanoip
 PRODUCT_DEVICE := hanoip
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g(60)

@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_hanoip.mk
+    $(LOCAL_DIR)/custom_hanoip.mk

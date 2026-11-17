@@ -41,8 +41,7 @@ PRODUCT_PACKAGES += \
     NotchBarKiller \
     SettingsResHanoip \
     SystemUIResHanoip \
-    TelephonyResHanoip \
-    UpdaterResHanoip
+    TelephonyResHanoip
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -441,7 +440,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel/power-libperfmgr \
+    hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/motorola \
     hardware/qcom-caf/common/libqti-perfd-client
