@@ -67,6 +67,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # The vendored runtime provides both the DAP effects and the Codec2 store.
 # It also builds LunarisDolby, so it must not be added here as well.
 $(call inherit-product, $(LOCAL_PATH)/dolby/dolby.mk)
+PRODUCT_SOURCE_ROOT_DIRS += -packages/apps/DolbyAtmos
 
 # Properties (managed in BoardConfig.mk via properties/*.prop)
 
