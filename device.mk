@@ -178,6 +178,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     MotoCamera5
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Override stock AOSP camera & Aperture
 PRODUCT_PACKAGES_REMOVE += \
     Aperture \
