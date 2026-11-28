@@ -170,7 +170,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Backup
 PRODUCT_PACKAGES += \
-    Seedvault
+    Seedvault \
+    SettingsProviderOverlaySeedvault
 
 $(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 

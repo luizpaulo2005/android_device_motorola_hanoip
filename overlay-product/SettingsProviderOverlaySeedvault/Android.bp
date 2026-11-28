@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsProviderOverlaySeedvault",
+    product_specific: true
+}
